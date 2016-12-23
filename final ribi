@@ -109,7 +109,7 @@
 </g>
 
 <animate 
-           xlink:href="#fish"
+           xlink:href="#c1"
            attributeName="fill"
            values="#8A2BE2;#7B68EE;rgb(170,170,255)"
            begin="click"
