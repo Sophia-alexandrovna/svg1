@@ -108,7 +108,26 @@
 </animateMotion>
 </g>
 
+<animate 
+           xlink:href="#fish"
+           attributeName="fill"
+           values="#8A2BE2;#7B68EE;rgb(170,170,255)"
+           begin="click"
+           dur="0.5s"
+           repeatCount="1"
+  />
 
+<script>
+var i = 0;
+function score(){
+  i = i + 1;
+  resEl = document.getElementById('res');
+  resEl.innerHTML = String(i);
+}
+</script>
+
+<br />
+<h1>You've clicked on the black fish <span id="res"></span> times </h1> 
 
 </svg>
 </html>
