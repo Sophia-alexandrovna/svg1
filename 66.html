@@ -1,0 +1,134 @@
+<html>
+<meta charset="utf-8">
+<h1>CLICK ON THE SUN</h1>
+<svg width="1000" height="750">
+<defs>
+        <linearGradient id="MyGradient" x2="0" y2="1">
+            <stop offset="5%"  stop-color="lightblue"/>
+            <stop offset="95%" stop-color="darkblue"/>
+        </linearGradient>
+   <linearGradient id="My" x="1">
+            <stop offset="5%"  stop-color="white"/>
+            <stop offset="95%" stop-color="rgb(0, 230, 230)"/>
+        </linearGradient>
+    <linearGradient id="Mys" x2="0" y2="1">
+            <stop offset="95%"  stop-color="rgb(26, 20, 0)"/>
+            <stop offset="5%" stop-color="black"/>
+        </linearGradient>
+    </defs>
+
+<rect width="1000" height="750" fill="url(#Mys)" stroke-width="4"/>
+<rect width="1000" height="680" fill="url(#MyGradient)" stroke-width="5" stroke="rgb(102, 78, 0)"/>
+<rect width="1000" height="100" fill="url(#My)" stroke-width="3"/>
+
+<circle onclick="score()" id="c1" cx="50" cy="50" r="35" stroke-width="4" fill="yellow" />
+
+
+<path fill="none" stroke="green" stroke-width="7" d="M50,1000 Q25,600 80,400" />
+<path fill="none" stroke="green" stroke-width="7" d="M60,1000 Q45,600 100,610" />
+
+
+
+<path fill="none" stroke="green" stroke-width="7" d="M3000,1000 Q60,1600 700,500" />
+<path fill="none" stroke="green" stroke-width="7" d="M4000,1000 Q50,1500 600,500" />
+<path fill="none" stroke="green" stroke-width="7" d="M3500,1000 Q55,1550 650,520" />
+<path fill="none" stroke="green" stroke-width="7" d="M7000,1000 Q70,1700 900,500" />
+<path fill="none" stroke="green" stroke-width="7" d="M6500,1000 Q65,1650 800,400" />
+
+
+
+
+<g><ellipse  cx="100" cy="200" rx="25" ry="15" fill="red" />
+<polygon points="80,200 60,150 78,270" style="fill:red" />
+<circle cx="110" cy="200" r="5" stroke="black" stroke-width="1" fill="white" />
+<path d="M100,300 A120,120 -45 0,1 110 10 A120,120 -45 0,1 100,300"
+       stroke-width="0" 
+      fill="none" id="theMotion"/>
+
+<animateMotion dur="6s" repeatCount="indefinite">
+        <mpath xlink:href="#theMotion"/>
+</animateMotion>
+
+</g>
+
+<g><ellipse cx="600" cy="200" rx="25" ry="15" fill="rgb(0, 204, 0)" />
+<polygon points="578,200 550,150 578,270" fill="rgb(0, 204, 0)" />
+<circle cx="610" cy="200" r="5" stroke="black" stroke-width="1" fill="white" />
+<path d="M100,-1 A20,120 -2 0,1 10 10 A10,12 -5 0,1 100,-1"
+       stroke-width="0" 
+      fill="none" id="theMo"/>
+
+<animateMotion dur="3s" repeatCount="indefinite">
+        <mpath xlink:href="#theMo"/>
+</animateMotion>
+
+</g>
+
+<g><ellipse cx="365" cy="200" rx="25" ry="15" fill="black" />
+<polygon points="380,200 400,150 398,260" style="fill:black" />
+<circle cx="355" cy="200" r="5" stroke="red" stroke-width="1" fill="white" />
+<path d="M1200,00 10,-2 A20,10 -5 0,1 119 10 A20,10 -5 0,1 10,-2 -10,00 -11, 00 -1200,1"
+       stroke-width="0" 
+      fill="none" id="theM"/>
+
+<animateMotion dur="9s" repeatCount="indefinite">
+        <mpath xlink:href="#theM"/>
+</animateMotion>
+
+</g>
+
+<g><ellipse cx="760" cy="200" rx="25" ry="15" fill="orange" />
+<polygon points="780,200 790,150 800,260" style="fill:orange" />
+<circle cx="750" cy="200" r="5" stroke="red" stroke-width="1" fill="white" />
+<path d="M80,-1 A20,120 -5 0,1 11 10 A20,14 -50 0,1 80,-1"
+       stroke-width="0" 
+      fill="none" id="the"/>
+
+<animateMotion dur="4s" repeatCount="indefinite">
+        <mpath xlink:href="#the"/>
+</animateMotion>
+
+</g>
+
+
+<g>
+<ellipse cx="565" cy="500" rx="75" ry="35" fill="rgb(0, 153, 122)" />
+<polygon points="580,500 600,450 598,560" fill="rgb(0, 153, 122)" />
+<circle cx="535" cy="500" r="5" stroke="red" stroke-width="1" fill="white" />
+<circle cx="535" cy="500" r="2" stroke="red" stroke-width="1" fill="red" />
+<polygon points="499,510 503,525 509,510" style="fill:white" />
+<polygon points="494,510 498,525 504,510" style="fill:white" />
+<polygon points="630,500 680,450 658,560" fill="rgb(0, 153, 122)" />
+
+<path d="M1200,00 -900,00 "
+       stroke-width="0" 
+       id="theMotionPath"/>
+
+<animateMotion dur="10s" repeatCount="indefinite">
+        <mpath xlink:href="#theMotionPath"/>
+</animateMotion>
+</g>
+
+<animate 
+           xlink:href="#c1"
+           attributeName="fill"
+           values="#FFD700;#EEC900;#FFC125;#8B7500"
+           begin="click"
+           dur="0.5s"
+           repeatCount="1"
+  />
+
+<script>
+var i = 0;
+function score(){
+  i = i + 1;
+  resEl = document.getElementById('res');
+  resEl.innerHTML = String(i);
+}
+</script>
+
+<br />
+<h1>You've clicked on the sun 0<span id="res"></span> times</h1> 
+
+</svg>
+</html>
